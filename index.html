@@ -4,28 +4,31 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header>
             <div class="header-logo"></div>
                 <a href=""></a>
-                <img src="./img/logo.jpeg" alt="logo">
+                <img class="header-img" src="./img/logo.jpg" alt="logo">
                 <h1 class="header-h1">Diario Tech</h1>
             </div>
         
             <nav>
-                <ul> <!-- solo escritorio-->
+                <ul> <!--escritorio-->
                     <li>
-                        <select>
+                        <select onchange="window.location.href = this.value;">
                             <option value="#Web">Sitios Web</option>
                             <option value="#LinkedIn">LinkedIn</option>
                             <option value="#YouTube">YouTube</option>
                             <option value="#Instagram">Instagram</option> 
-                        <!--ver tema filtro--> <!-- ver si iconos o img autor, (x, telegram?)-->
                         </select>
                     </li> 
-                    <li><a href="">Nosotros</a></li>
-                    <li><a href="">Contacto</a></li>
+                    <li><a href="pages/suscribe.html">Suscripción</a></li>
                 </ul>
 
                 <div class="header-menu"></div>
@@ -35,79 +38,86 @@
             </nav>
         </header>
 
+        <div class="container">
         <main>
-            <section class="main-section">
-                <h2 id="main-h1">Tendencias Tech</h2>
-
-                <div class="main-fecha">
-                    <time datetime="2024-06-04T15:23">04 DE JUNIO | 15.23</time>
-                </div>
+            <h2 class="main-h2" id="Web">Tendencias Tech en la Web</h2>
+            <section class="main-section" id="web-section">
                 <article class="main-article" id="article1">
-                <picture class="article-imagen">
-                    <a href="https://decrypt.co/es/231381/elon-musk-neuralink-busca-voluntario-para-implante-cerebral-de-telepatia"></a>
-                    <img src="./img/articulo1.jpeg" alt="imagen de la noticia">
-                </picture>
+                    <div class="main-fecha">
+                        <time datetime="2024-06-04T15:23">04 DE JUNIO | 15.23</time>
+                    </div>
 
-                <h2 class="article-h2">No es Black Mirror, es <strong>Neuralink</strong>: Busca voluntarios para iniciar pruebas del <strong>implante cerebral</strong></h2>
-                <p class="article-p">¿Quién sigue? Elon Musk anunció que Neuralink está aceptando solicitudes para el segundo sujeto de prueba para su ensayo de chip cerebral.</p>
-
-                <div class="article-autor">
-                    <picture>
-                        <div class="article-logo">
-                            <a href="https://decrypt.co/es/emerge"></a>
-                            <img src="./img/autor1.jpeg" alt="autor">
-                        </div>
-                        <div class="article-sitio">
-                            <a href="https://decrypt.co/es/emerge"></a>
-                            <img src="./img/sitio1.jpeg" alt="sitio web">
-                            <!-- <p class="article-sitio">Emerge</p> -->
-                        </div>
+                    <picture class="article-imagen">
+                        <a href="https://decrypt.co/es/231381/elon-musk-neuralink-busca-voluntario-para-implante-cerebral-de-telepatia" target="_blank">
+                            <img class="picture-articulo" src="./img/articulo1.jpeg" alt="imagen de la noticia"></a>
                     </picture>
-                </div>
 
-                <div class="article-favorito">
-                    <img src="./img/favorito.png" alt="favorito">
-                </div>
+                    <h2 class="article-h2">No es Black Mirror, es <strong>Neuralink</strong>: Busca voluntarios para iniciar pruebas del <strong>implante cerebral</strong></h2>
+                    <p class="article-p">¿Quién sigue? Elon Musk anunció que Neuralink está aceptando solicitudes para el segundo sujeto de prueba para su ensayo de chip cerebral.</p>
+
+                    <div class="article-autor">
+                        <picture class="picture-article">
+                            <div class="article-logo">
+                                <a href="https://decrypt.co/es/emerge" target="_blank">
+                                <img class="picture-autor" src="./img/autor1.png" alt="autor"></a>
+                            </div>
+                            <div class="article-sitio">
+                                <a href="https://decrypt.co/es/emerge" target="_blank">
+                                <img class="picture-sitio" src="./img/sitio1.jpeg" alt="sitio web"></a>
+                                <!-- <p class="article-sitio">Emerge</p> -->
+                            </div>
+                        </picture>
+
+                        <div class="article-logos">
+                            <div class="article-favorito">
+                                <img src="./img/favorito.png" alt="favorito">
+                            </div>
+                            <!-- <div class="article-web"> 
+                                <img src="./img/web.png" alt="web">
+                            </div> -->
+                        </div>
+                    </div>
             </article>
 
-
-            <div class="main-fecha">
-                <time datetime="2024-05-30T00:10">30 DE MAYO | 00.10</time>
-            </div>
             <article class="main-article" id="article2">
+                <div class="main-fecha">
+                    <time datetime="2024-05-30T00:10">30 DE MAYO | 00.10</time>
+                </div>
+
             <picture class="article-imagen">
-                <a href="https://www.lanacion.com.ar/editoriales/silicon-valley-y-la-argentina-un-viaje-al-futuro-nid30052024/"></a>
-                <img src="./img/articulo2.png" alt="imagen de la noticia">
+                <a href="https://www.lanacion.com.ar/editoriales/silicon-valley-y-la-argentina-un-viaje-al-futuro-nid30052024/" target="_blank">
+                    <img class="picture-articulo" src="./img/articulo2.png" alt="imagen de la noticia"></a>
             </picture>
 
             <h2 class="article-h2"><strong>Silicon Valley</strong> y la <strong>Argentina</strong>: un viaje al futuro</h2>
-            <p class="article-p">La intención del presidente Milei de convertir al país en un polo de inteligencia artificial representa una desafiante oportunidad que debe ser apoyada.</p>
+            <p class="article-p">La intención del presidente Milei de convertir al país en un polo de inteligencia artificial representa una desafiante oportunidad que debe ser apoyada.
+                                Lorem ipsum dolor, voluptates voluptatibus.</p>
 
             <div class="article-autor">
-                <picture>
+                <picture class="picture-article">
                     <div class="article-logo">
-                        <a href="https://www.lanacion.com.ar/"></a>
-                        <img src="./img/autor2.jpeg" alt="autor">
+                        <a href="https://www.lanacion.com.ar/" target="_blank">
+                        <img class="picture-autor" src="./img/autor2.jpeg" alt="autor"></a>
                     </div>
                     <div class="article-sitio">
-                        <a href="https://www.lanacion.com.ar/"></a>
-                        <img src="./img/sitio2.jpeg" alt="sitio web">
+                        <a href="https://www.lanacion.com.ar/" target="_blank">
+                        <img class="picture-sitio" src="./img/sitio2.jpeg" alt="sitio web"></a>
                         <!-- <p class="article-sitio">La Nacion</p> -->
                     </div>
                 </picture>
-            </div>
 
-            <div class="article-favorito">
-                <img src="./img/favorito.png" alt="favorito">
-            </div>
-            </article>
-
-            <div class="section-flecha">
-                <p class="p-flecha">></p>
+                <div class="article-logos"> <!-- hacer rectangular -->
+                    <div class="article-favorito"> <!-- hacer redondo -->
+                        <img src="./img/favorito.png" alt="favorito">
+                    </div>
+                    <!-- <div class="article-web">
+                        <img src="./img/web.png" alt="web">
+                    </div> -->
+                </div>
             </div>
             </section>
 
-            <section class="section-botones"> <!-- en responsive para tablet -->
+            <section class="section-botones">
                 <input type="radio" name="article" id="article1" checked>
                     <label for="article1"></label>
                 <input type="radio" name="article" id="article2">
@@ -116,41 +126,341 @@
                     <label for="article3"></label>
             </section>
 
-            <aside>
-                <picture>
-                    <a href=""></a>
-                    <img src="" alt="">
+            <section class="section-flecha">
+                <div class="div-flecha">
+                    <p class="p-flecha">></p>
+                </div>
+            </section>
 
-                    <div class="div-hrgrey"></div>
+            <h2 class="main-h2" id="Instagram">Tendencias Tech en Instagram</h2>
+            <section class="main-section" id="instagram-section">
+                <article class="main-article" id="article3">
+                    <div class="main-fecha">
+                        <time datetime="2024-06-09T12:00">09 DE JUNIO | 12.00</time>
+                    </div>
 
-                    <section class="aside-section">
-                        <p class="aside-titulo">La más vistas</p>
-                        <div class="div-hrcolor"></div>
-
-                        <ul>
-                            <li>
-                                <article class="aside-article">
-                                    <a href="https://cursos.desafiolatam.com/courses/english-for-developers-it-professionals?utm_source=Linkedin&utm_medium=embajadores_vanessa&utm_campaign=cursos_gratuitos&utm_content=ingles"></a>
-                                    <h3 class="aside-h3"><strong>Aprende inglés gratis y con certificado</strong></h3>
-                                    <p class="aside-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias modi possimus quo sed laboriosam unde provident hic dignissimos deserunt atque, a cupiditate pariatur vero voluptate iusto rerum natus perferendis enim labore nisi nihil facilis fugiat quis! Atque saepe eum hic necessitatibus magnam sed minus nam corrupti laudantium quae repellendus sunt iste optio ducimus et assumenda culpa ullam enim harum labore illum, consequatur soluta natus nisi? Maxime perferendis reprehenderit beatae vel placeat commodi a aperiam praesentium minima officiis, voluptatem necessitatibus quia debitis exercitationem quae quo odit obcaecati. Vero maxime, ea incidunt et, voluptatem illum sed fugiat, accusamus aliquam dolorum laboriosam. Similique quas quasi explicabo aliquam laudantium recusandae, alias ratione sapiente ex minus sequi non commodi architecto, nulla voluptatem reprehenderit assumenda eaque illum pariatur. Id deleniti laboriosam, mollitia voluptatibus sed a ratione perferendis tempore quae doloremque itaque nobis facilis porro expedita reprehenderit magni temporibus consequuntur excepturi soluta labore? Aspernatur placeat saepe veritatis?</p>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="aside-article">
-                                    <a href="https://achirou.com/ciberseguridad-para-profesionales/"></a>
-                                    <h3 class="aside-h3"></h3>
-                                    <p class="aside-p">Esta <strong>ruta de aprendizaje</strong> esta creada para aquellas personas que desean aprender a <strong>proteger su información</strong> de los <strong>ciberdelincuentes</strong>, pero no buscan trabajar como <strong>Hacker</strong>.
-                                                        Es decir, esta ruta es ideal para personas, empleados, profesionales que tienen información sensible, personal o de sus clientes que desean proteger.</p>
-                                </article>
-                            </li>
-                        </ul>
-                    </section>
+                <picture class="article-imagen"> 
+                    <a href="https://www.instagram.com/reel/C8Aq9wRBkC7/?igsh=aW5xaWxxamZ4M295" target="_blank">
+                        <img src="./img/articulo3.jpg" alt="imagen de la noticia"></a>
+                    <!-- <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/C8Aq9wRBkC7/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/C8Aq9wRBkC7/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/C8Aq9wRBkC7/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida de Stephanie Cherni (@stephiecherni)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script> -->                     
                 </picture>
-            </aside>
-        </main>
 
-        <footer>
-            <p class="footer-p">&copy; 2024 Diario Tech. Todos los derechos reservados.</p>
-        </footer>
+                <h2 class="article-h2">Las noticias más relevantes del mundo tecnológico</h2>
+                <p class="article-p">Resumen semanal de noticias tecnológicas: Descubre las últimas innovaciones y desarrollos que están dando forma al mundo digital. Mantente al día con las tendencias más relevantes del sector.</p>
+
+
+                <div class="article-autor">
+                    <picture>
+                        <div class="article-logo">
+                            <a href="https://www.instagram.com/stephiecherni/" target="_blank">
+                            <img class="picture-autor" src="./img/autor3.png" alt="autor"></a>
+                        </div>
+                        <div class="article-sitio">
+                            <a href="https://www.instagram.com/stephiecherni/" target="_blank">
+                            <img class="picture-sitio" src="./img/sitio3.png" alt="perfil de instagram"></a>
+                        </div>
+                    </picture>
+
+                    <div class="article-logos">
+                        <div class="article-favorito">
+                            <img src="./img/favorito.png" alt="favorito">
+                        </div>
+                        <!-- <div class="article-instagram">
+                            <img src="./img/instagram.png" alt="instagram">
+                        </div> -->
+                    </div>
+                </div>
+            </article>
+
+            <article class="main-article" id="article4">
+                <div class="main-fecha">
+                    <time datetime="2024-06-07T17:10">07 DE MAYO | 17.10</time>
+                </div>
+
+                <picture class="article-imagen">
+                    <a href= "https://www.instagram.com/reel/C7mX9fWstdk/?igsh=MWpsYWQ0MmV0amZpYg==" target="_blank">
+                        <img src="./img/articulo4.jpg" alt="imagen de la noticia"></a>
+                </picture>
+
+                <h2 class="article-h2">Si no te adaptas a la IA, no sobreviviras</h2>
+                <p class="article-p">Adaptación crucial: La inteligencia artificial está transformando rápidamente industrias. Quienes no se ajusten podrían ser reemplazados por tecnología avanzada. La evolución hacia la IA es inevitable.</p>
+
+
+                <div class="article-autor">
+                    <picture>
+                        <div class="article-logo">
+                            <a href="https://www.instagram.com/margaritapasos/" target="_blank">
+                            <img class="picture-autor" src="./img/autor4.png" alt="autor"></a>
+                        </div>
+                        <div class="article-sitio">
+                            <a href="https://www.instagram.com/margaritapasos/" target="_blank">
+                            <img class="picture-sitio" src="./img/sitio4.png" alt="perfil de instagram"></a>
+                        </div>
+                    </picture>
+
+                    <div class="article-logos">
+                        <div class="article-favorito"> <!-- hacer redondo -->
+                            <img src="./img/favorito.png" alt="favorito">
+                        </div>
+                        <!-- <div class="article-instagram">
+                            <img src="./img/instagram.png" alt="instagram">
+                        </div> -->
+                    </div>
+                </div>
+            </article>
+            </section>
+
+            <section class="section-botones">
+                <input type="radio" name="article" id="article1" checked>
+                    <label for="article1"></label>
+                <input type="radio" name="article" id="article2">
+                    <label for="article2"></label>
+                <input type="radio" name="article" id="article3">
+                    <label for="article3"></label>
+            </section>
+
+            <section class="section-flecha">
+                <div class="div-flecha">
+                    <p class="p-flecha">></p>
+                </div>
+            </section>
+
+            <h2 class="main-h2" id="YouTube">Tendencias Tech en YouTube</h2>
+            <section class="main-section">
+                <article class="main-article" id="article5">
+                    <div class="main-fecha">
+                        <time datetime="2023-10-03T21:15">03 DE OCTUBRE | 21.15</time>
+                    </div>
+
+                <div class="article-imagen" id="article-video">
+                    <iframe class="picture-iframe" width="560" height="315" src="https://www.youtube.com/embed/hbHcHqK7kxU?si=V7c6mEdpdAK1F4hb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                        
+                <h2 class="article-h2"><strong>Los secretos para convertirte en el mejor desarrollador de software</strong></h2>
+                <p class="article-p">Los secretos para convertirte en el mejor desarrollador de software, descubre los secretos para sobresalir como desarrollador de software, sin importar si eres Junior, Intermedio o Senior. 
+                                    Exploraremos cómo los juniors pueden agregar valor, cómo evaluar candidatos y cómo abordar problemas en equipo, también aprenderemos prácticas cruciales a evitar y cómo transformar errores en valiosas soluciones. 
+                                    Un viaje para potenciar tu carrera en el mundo del desarrollo.
+                </p>
+                <div class="article-autor">
+                    <picture>
+                        <div class="article-logo">
+                            <a href="https://www.youtube.com/@Pitcheers" target="_blank">
+                            <img class="picture-autor" src="./img/autor5.jpeg" alt="autor"></a>
+                        </div>
+                        <div class="article-sitio">
+                            <a href="https://www.youtube.com/@Pitcheers" target="_blank">
+                            <img class="picture-sitio" src="./img/sitio5.png" alt="canal de YouTube"></a>
+                        </div>
+                    </picture>
+
+                    <div class="article-logos">
+                        <div class="article-favorito"> 
+                            <img src="./img/favorito.png" alt="favorito">
+                        </div>
+                        <!-- <div class="article-youtube"> 
+                            <img src="./img/youtube.png" alt="YouTube">
+                        </div> -->
+                    </div>
+                </div>
+            </article>
+
+            <article class="main-article" id="article6">
+                <div class="main-fecha">
+                    <time datetime="2024-05-25T13:30">25 DE MAYO | 13.30</time>
+                </div>
+
+            <div class="article-imagen" class="article-video">
+                <iframe class="picture-iframe" width="560" height="315" src="https://www.youtube.com/embed/MTnG_c-PYeM?si=5nIrElwnCwpFmQ6i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
+            </div>
+
+            <h2 class="article-h2">Gen-z, la generación perdida | <strong>Freddy Vega CEO Cofounder de Platzi</strong></h2>
+            <p class="article-p">Podcast en donde conversamos junto a Freddy Vega cofundador y CEO de Platzi, de los peligros de la tecnología en la educación, salir adelante sin importar de donde vengas y como la inteligencia no va acabar con tu trabajo si aprendes a trabajar con ella.<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur.</p>
+
+            <div class="article-autor">
+                <picture>
+                    <div class="article-logo">
+                        <a href="https://www.youtube.com/watch?v=MTnG_c-PYeM" target="_blank">
+                        <img class="picture-autor" src="./img/autor6.jpeg" alt="autor"></a>
+                    </div>
+                    <div class="article-sitio">
+                        <a href="https://www.youtube.com/watch?v=MTnG_c-PYeM" target="_blank">
+                        <img class="picture-sitio" src="./img/sitio6.png" alt="canal de YouTube"></a>
+                    </div>
+                </picture>
+
+                <div class="article-logos">
+                    <div class="article-favorito"> 
+                        <img src="./img/favorito.png" alt="favorito">
+                    </div>
+                    <!-- <div class="article-youtube"> 
+                        <img src="./img/youtube.png" alt="YouTube">
+                    </div> -->
+                </div>
+            </div>
+            </article>
+            </section>
+            
+            <section class="section-botones">
+                <input type="radio" name="article" id="article1" checked>
+                    <label for="article1"></label>
+                <input type="radio" name="article" id="article2">
+                    <label for="article2"></label>
+                <input type="radio" name="article" id="article3">
+                    <label for="article3"></label>
+            </section>
+
+            <section class="section-flecha">
+                <div class="div-flecha">
+                    <p class="p-flecha">></p>
+                </div>
+            </section>
+
+            <h2 class="main-h2" id="LinkedIn">Tendencias Tech en LinkedIn</h2>
+            <section class="main-section">
+                <article class="main-article" id="article7">
+                    <div class="main-fecha">
+                        <time datetime="2024-05-14T15:23">14 DE MAYO | 17.00</time>
+                    </div>
+
+                    <picture class="article-imagen" id="article-imagen">
+                        <a href="https://www.linkedin.com/posts/braismoure_holamundoday-activity-7193715457441320960-vqjH?utm_source=share&utm_medium=member_android" target="_blank">
+                            <img class="picture-articulo" src="./img/articulo7.jpeg" alt="imagen de la noticia"></a>
+                    </picture>
+
+                    <h2 class="article-h2">¿Qué hace que un <strong>GitHub</strong> sea "bueno"?</h2>
+                    <p class="article-p"> Lorem ipsum, consectetur adipisicing elit. Soluta facere temporibus ea molestiae. Soluta facere, eos voluptatum quia nihil velit atque ipsum fugit.</p>
+
+                    <div class="article-autor">
+                        <picture>
+                            <div class="article-logo">
+                                <a href="https://www.linkedin.com/in/braismoure/" target="_blank">
+                                <img class="picture-autor" src="./img/autor7.png" alt="autor"></a>
+                            </div>
+                            <div class="article-sitio">
+                                <a href="https://www.linkedin.com/in/braismoure/" target="_blank">
+                                <img class="picture-sitio" src="./img/sitio7.png" alt="LinkedIn"></a>
+                            </div>
+                        </picture>
+
+                        <div class="article-logos">
+                            <div class="article-favorito"> 
+                                <img src="./img/favorito.png" alt="favorito">
+                            </div>
+                            <!-- <div class="article-linkedin"> 
+                                <img src="./img/linkedin.png" alt="LinkedIn">
+                            </div> -->
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main-article" id="article8">
+                    <div class="main-fecha">
+                        <time datetime="2023-10-21T00:10">21 DE OCTUBRE | 00.10</time>
+                    </div>
+                    
+                <picture class="article-imagen" id="article-imagen">
+                    <a href="https://www.linkedin.com/posts/midudev_tienes-miedo-a-preguntar-en-programaci%C3%B3n-activity-7100876591437635584-6aAS?utm_source=share&utm_medium=member_android" target="_blank">
+                        <img class="picture-articulo" src="./img/articulo8.jpeg" alt="imagen de la noticia"></a>
+                </picture>
+
+                <h2 class="article-h2">¿Sufres el <strong>síndrome del impostor</strong>?</h2>
+                <p class="article-p">¿Tienes miedo a preguntar en programación?
+                                    ¿Sufres el síndrome del impostor?
+                                    Recuerda que todo el mundo fue aprendiz al empezar.
+                                    Aquí tienes el creador de Google preguntando en foros:</p>
+
+                <div class="article-autor">
+                    <picture>
+                        <div class="article-logo">
+                            <a href="https://www.linkedin.com/in/midudev/" target="_blank">
+                            <img class="picture-autor" src="./img/autor8.png" alt="autor"></a>
+                        </div>
+                        <div class="article-sitio">
+                            <a href="https://www.linkedin.com/in/midudev/" target="_blank">
+                            <img class="picture-sitio" src="./img/sitio8.png" alt="LinkedIn"></a>
+                        </div>
+                    </picture>
+
+                    <div class="article-logos">
+                        <div class="article-favorito"> 
+                            <img src="./img/favorito.png" alt="favorito">
+                        </div>
+                        <!-- <div class="article-linkedin"> 
+                            <img src="./img/linkedin.png" alt="LinkedIn">
+                        </div> -->
+                    </div>
+                </div>
+                </article>
+            </section>
+
+            <section class="section-botones">
+                <input type="radio" name="article" id="article1" checked>
+                    <label for="article1"></label>
+                <input type="radio" name="article" id="article2">
+                    <label for="article2"></label>
+                <input type="radio" name="article" id="article3">
+                    <label for="article3"></label>
+            </section>
+
+            <section class="section-flecha">
+                <div class="div-flecha">
+                    <p class="p-flecha">></p>
+                </div>
+            </section>
+
+        </main>
+        <aside>
+            <picture>
+                <a href="https://www.linkedin.com/posts/soysofiacontreras_emprendedores-desarrollopersonal-desarrolloprofesional-activity-7129950815150088193-5ajZ?utm_source=share&utm_medium=member_android"></a>
+                <img src="./img/articuloplus1.jpeg" alt="autora">
+
+                <div class="div-hrgrey"></div>
+
+                <section class="aside-section">
+                    <p class="aside-titulo">La más vistas</p>
+                    <div class="div-hrcolor"></div>
+
+                    <ul>
+                        <li>
+                            <article class="aside-article">
+                                <a class="links" href="https://www.linkedin.com/posts/soysofiacontreras_emprendedores-desarrollopersonal-desarrolloprofesional-activity-7129950815150088193-5ajZ?utm_source=share&utm_medium=member_android"><h3 class="aside-h3"><strong>Los 9 libros que cambiaron mi vida</strong></h3></a>
+                                <p class="aside-p">En el nuevo episodio de mi podcast semanal, te comparto los 9 libros que cambiaron mi vida, potenciando mi crecimiento personal y profesional:
+                                    Si tuvieras que recomendar un sólo libro en toda tu vida ¿Cuál sería?
+                                    Escucha el episodio aquí: <a href="https://spoti.fi/49Bwokm">https://spoti.fi/49Bwokm</a>
+                                </p>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="aside-article">
+                                <a class="links" href="https://cursos.desafiolatam.com/courses/english-for-developers-it-professionals?utm_source=Linkedin&utm_medium=embajadores_vanessa&utm_campaign=cursos_gratuitos&utm_content=ingles"><h3 class="aside-h3"><strong>Aprende inglés gratis y con certificado</strong></h3></a>
+                                <p class="aside-p">Lorem ipsum illum pariatur. Id deleniti laboriosam, mollitia voluptatibus sed a ratione perferendis tempore quae doloremque itaque nobis facilis porro expedita reprehenderit magni temporibus consequuntur excepturi soluta labore? Aspernatur placeat saepe veritatis?</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="aside-article">
+                                <a class="links" href="https://achirou.com/ciberseguridad-para-profesionales/"><h3 class="aside-h3">Ciberseguridad para Profesionales</h3></a>
+                                <p class="aside-p">Esta <strong>ruta de aprendizaje</strong> esta creada para aquellas personas que desean aprender a <strong>proteger su información</strong> de los <strong>ciberdelincuentes</strong>, pero no buscan trabajar como <strong>Hacker</strong>.
+                                                    Es decir, esta ruta es ideal para personas, empleados, profesionales que tienen información sensible, personal o de sus clientes que desean proteger.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="aside-article">
+                                <a class="links" href="https://youtu.be/ZiwXD1JTkgg?si=SHrozgCdW78Stlwm"><h3 class="aside-h3">Las 12 cosas que DEBES aprender para trabajar en tecnología</h3></a>
+                                <p class="aside-p">Cada área está compuesta por <strong>Rutas de aprendizaje</strong> y Escuelas que harán de <strong>tu perfil uno de los más demandados</strong> de la industria.</p>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+            </picture>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Noticias Tech.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </footer>
     </body>
-    </html>
+</html>

@@ -1,0 +1,197 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(147, 24, 151);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+.header-logo img {
+    width: 50px;
+    height: 50px; 
+    /* border-radius: 10px; */
+}
+.header-h1 {
+    font-size: 24px;
+    margin: 0;
+    color: rgb(239, 170, 241);
+    text-align: center;
+    flex-grow: 1;
+}
+nav {
+    display: none;
+}
+.header-menu {
+    display: block;
+    margin-right: 0;
+    position: relative;
+}
+.header-menu img {
+    width: 30px;
+    height: 30px;
+}
+
+main{
+    padding-top: 150px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.form-group {
+    flex: 1 1 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 5px;
+}
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    height: 1.2em;
+}
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+button {
+    padding: 20px 60px;
+    background-color: #e9e0e7;
+    color: rgb(147, 24, 151);;;
+    border: 2px solid  rgb(147, 24, 151); 
+    border-radius: 15px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #865477;
+}
+
+footer {
+    background-color: rgb(147, 24, 151);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+.footer-content p {
+    margin: 0.5em 0;
+}
+
+dialog#myModal {
+    border: 5px solid  rgb(147, 24, 151); 
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+#modalContent {
+    margin-top: 20px;
+}
+#closeModal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color:  rgb(147, 24, 151);
+}
+
+@media (max-width: 780px) {
+    .form-group {
+        flex: 1 1 100%;
+    }
+    nav ul{
+        display: none;
+    }
+    .header-menu{
+        display: flex;
+        justify-content: flex-end;
+        width: auto;
+    }
+    .header-menu img{
+        width: 20px;
+        height: auto;
+    }
+}
+
+@media screen and (width > 1230px) {
+    .container {
+        display: flex; 
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 20px;
+    }
+    nav ul li {
+        display: flex;
+        align-items: center;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(147, 24, 151);
+        padding: 10px 15px;
+        border-radius: 15px;
+        background-color: #ddd;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    nav ul li a:hover {
+        background-color: #bbb;
+        color: #000;
+    }
+    nav ul li select {
+        padding: 10px 15px;
+        border-radius: 15px;
+        background-color: #ddd;
+        color: rgb(147, 24, 151);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    nav ul li select:hover {
+        background-color: #bbb;
+        color: #000;
+    }
+    .header-menu {
+        display: none !important;
+    }
+}
